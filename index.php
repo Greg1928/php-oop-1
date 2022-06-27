@@ -29,3 +29,34 @@
     ]
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    <h1>Movies</h1>
+    <ul>
+        <?php foreach($movies as $movie) { ?>
+            <li>
+                <h3><?php echo $movie->title; ?></h3>
+                <p><strong>Year: </strong><?php echo $movie->year; ?></p>
+                <p><strong>Original Language: </strong><?php echo $movie->original_language; ?></p>
+                <p><strong>Running Time: </strong><?php echo $movie->running_time; ?> minutes
+                <?php
+                    $duration = $movie->isShort();
+                    if ($duration) {
+                ?>
+                <span style="color: green;"><?php echo 'Short Film' ?></span></p>
+                <?php } ?>
+                <p><strong>Genre: </strong><?php echo $movie->genre; ?></p>
+            </li>
+            <hr>
+        <?php } ?>
+    </ul>
+</body>
+</html>
