@@ -43,7 +43,7 @@
     <ul>
         <?php foreach($movies as $movie) { ?>
             <li>
-                <h3><?php echo $movie->title; ?></h3>
+                <h2><strong>Title: </strong><?php echo $movie->title; ?></h2>
                 <p><strong>Year: </strong><?php echo $movie->year; ?></p>
                 <p><strong>Original Language: </strong><?php echo $movie->original_language; ?></p>
                 <p><strong>Running Time: </strong><?php echo $movie->running_time; ?> minutes
